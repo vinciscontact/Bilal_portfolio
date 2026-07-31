@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BILLAL — Video Editor &amp; Content Creator | Chennai</title>
+  <meta name="description" content="Billal — 16-year-old cinematic video editor and reel creator from Chennai. 200K+ strong Instagram family. DM for paid edits and promotions." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css?v=15" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+  <!-- ══════════════ FILM GRAIN OVERLAY ══════════════ -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ══════════════ CUSTOM CURSOR ══════════════ -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"><span class="cursor__label"></span></div>
+  </div>
+
+  <!-- ══════════════ PRELOADER ══════════════ -->
+  <div class="loader" id="loader">
+    <div class="loader__bar loader__bar--top"></div>
+    <div class="loader__bar loader__bar--bottom"></div>
+    <div class="loader__center">
+      <p class="loader__presents mono">BILLAL.EDITS <span class="red">PRESENTS</span></p>
+      <div class="loader__count"><span id="loaderCount">00</span><span class="loader__pct">%</span></div>
+      <div class="loader__reel" aria-hidden="true">
+        <div class="loader__reel-fill" id="loaderFill"></div>
+      </div>
+      <p class="loader__hint mono">A CHENNAI PRODUCTION — EST. 2009</p>
+    </div>
+  </div>
+
+  <!-- ══════════════ NAV ══════════════ -->
+  <header class="nav" id="nav">
+    <a class="nav__logo mono" href="#top" data-cursor="hover">
+      <span class="rec-dot" aria-hidden="true"></span>BILLAL<span class="red">.EDITS</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#story" class="nav__link mono" data-cursor="hover">STORY</a>
+      <a href="#work" class="nav__link mono" data-cursor="hover">WORK</a>
+      <a href="#whatif" class="nav__link mono" data-cursor="hover">SERIES</a>
+      <a href="#family" class="nav__link mono" data-cursor="hover">FAMILY</a>
+      <a href="#contact" class="nav__link mono" data-cursor="hover">CONTACT</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="btn-sound mono" id="soundToggle" data-cursor="hover" aria-label="Toggle music" aria-pressed="false">
+        <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="btn-sound__txt">SOUND</span>
+      </button>
+      <button class="btn-lights mono" id="themeToggle" data-cursor="hover" aria-label="Toggle light theme">
+        <span class="btn-lights__bulb" aria-hidden="true"></span>
+        <span class="btn-lights__txt">LIGHTS</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ══════════════ SC.00 — HERO ══════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero__meta hero__meta--tl mono reveal-meta">REEL CREATOR · CINEMATIC EDITS</div>
+      <div class="hero__meta hero__meta--tr mono reveal-meta">CHENNAI, INDIA <span class="red">●</span> EST. 2009</div>
+
+      <!-- layered title: back type / cutout image / front (clipped) type -->
+      <div class="hero__stage">
+        <h1 class="hero__title hero__title--back" aria-label="Billal">
+          <span class="hero__line hero__line--1">BILLAL</span>
+          <span class="hero__line hero__line--2 outline">EDITS<span class="red">.</span></span>
+        </h1>
+        <div class="hero__figure">
+          <img src="Images/hero.png" alt="Billal — three cinematic poses in red" class="hero__img" />
+        </div>
+        <div class="hero__title hero__title--front" aria-hidden="true">
+          <span class="hero__line hero__line--1">BILLAL</span>
+          <span class="hero__line hero__line--2 outline">EDITS<span class="red">.</span></span>
+        </div>
+      </div>
+
+      <div class="hero__meta hero__meta--bl reveal-meta">
+        <p class="mono">— VIDEO EDITOR &nbsp;— REEL CREATOR</p>
+        <p class="mono">— STORYTELLER &nbsp;— <span class="red">200K FAMILY</span></p>
+      </div>
+      <div class="hero__meta hero__meta--br mono reveal-meta">
+        <span class="rec-badge"><span class="rec-dot"></span>REC</span>
+        <span class="hero__scroll-txt">SCROLL TO PLAY</span>
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <!-- ══════════════ MARQUEE ══════════════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__inner" id="marqueeInner">
+        <span class="marquee__chunk">
+          CINEMATIC EDITS <em>✦</em> WHAT IF? — SEASON 01 <em>✦</em> TAMIL EDITING COMMUNITY <em>✦</em> GOD MODE <em>✦</em> REELS THAT HIT DIFFERENT <em>✦</em> PAID EDITS — DM <em>✦</em>
+        </span>
+        <span class="marquee__chunk">
+          CINEMATIC EDITS <em>✦</em> WHAT IF? — SEASON 01 <em>✦</em> TAMIL EDITING COMMUNITY <em>✦</em> GOD MODE <em>✦</em> REELS THAT HIT DIFFERENT <em>✦</em> PAID EDITS — DM <em>✦</em>
+        </span>
+      </div>
+    </div>
+
+    <!-- ══════════════ SC.01 — STORY ══════════════ -->
+    <section class="story" id="story">
+      <div class="scene-tag mono"><span class="red">SC.01</span> — THE ORIGIN</div>
+
+      <div class="story__grid">
+        <div class="story__visual">
+          <div class="story__frame" data-cursor="view">
+            <img src="Images/Bilal.jpeg" alt="Portrait of Billal" class="story__img" data-speed="0.6" />
+            <div class="story__frame-tag mono">SUBJECT: BILLAL — AGE 16</div>
+            <div class="story__frame-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+
+        <div class="story__copy">
+          <h2 class="story__heading" data-reveal="lines">
+            EVERY FRAME<br />IS A <span class="serif-it red">feeling</span><span class="red">.</span>
+          </h2>
+          <p class="story__manifesto manifesto">
+            I'm Billal — sixteen, from Chennai, and permanently obsessed with the cut. I don't just trim clips; I build moments — the pause before the beat drops, the frame that gives you chills. Every edit I post is a small film, and every follower is family. My mission is bigger than me: to push the Tamil editing community onto the world stage, one reel at a time. This isn't a hobby. This is the opening scene of my career.
+          </p>
+          <div class="story__stats">
+            <div class="stat">
+              <div class="stat__num"><span class="count" data-count="200">0</span>K<span class="red">+</span></div>
+              <div class="stat__label mono">FAMILY MEMBERS</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num"><span class="count" data-count="145">0</span><span class="red">+</span></div>
+              <div class="stat__label mono">DROPS POSTED</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num"><span class="count" data-count="16">0</span></div>
+              <div class="stat__label mono">YEARS YOUNG</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">∞</div>
+              <div class="stat__label mono">FRAMES LEFT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ SC.02 — WORK (horizontal film strip) ══════════════ -->
+    <section class="work" id="work">
+      <div class="work__pin">
+        <div class="scene-tag scene-tag--work mono"><span class="red">SC.02</span> — SELECTED CUTS <span class="work__drag mono">SCROLL ⟶</span></div>
+        <div class="work__track" id="workTrack">
+
+          <div class="work__intro">
+            <h2 class="work__heading">
+              <span class="outline">THE</span><br />CUTS<span class="red">.</span>
+            </h2>
+            <p class="work__sub mono">04 SELECTED REELS — TAP TO WATCH ON IG</p>
+          </div>
+
+          <a class="film-card" href="https://www.instagram.com/billal.edits?igsh=ZWRjeHh0dWx1c2ps" target="_blank" rel="noopener" data-cursor="play">
+            <div class="film-card__holes film-card__holes--top" aria-hidden="true"></div>
+            <figure class="film-card__frame">
+              <img src="Images/Thumbnaills/1.png" alt="GOD MODE — red silhouette edit" loading="lazy" />
+            </figure>
+            <div class="film-card__holes film-card__holes--bottom" aria-hidden="true"></div>
+            <div class="film-card__info">
+              <span class="film-card__idx mono">CUT_01</span>
+              <h3 class="film-card__title">GOD MODE</h3>
+              <span class="film-card__cat mono">SILHOUETTE / VFX</span>
+            </div>
+          </a>
+
+          <a class="film-card" href="https://www.instagram.com/billal.edits?igsh=ZWRjeHh0dWx1c2ps" target="_blank" rel="noopener" data-cursor="play">
+            <div class="film-card__holes film-card__holes--top" aria-hidden="true"></div>
+            <figure class="film-card__frame">
+              <img src="Images/Thumbnaills/2.jpeg" alt="ABSOLUTE EDIT — black and white concept" loading="lazy" />
+            </figure>
+            <div class="film-card__holes film-card__holes--bottom" aria-hidden="true"></div>
+            <div class="film-card__info">
+              <span class="film-card__idx mono">CUT_02</span>
+              <h3 class="film-card__title">ABSOLUTE EDIT</h3>
+              <span class="film-card__cat mono">B&amp;W / CONCEPT</span>
+            </div>
+          </a>
+
+          <a class="film-card" href="https://www.instagram.com/billal.edits?igsh=ZWRjeHh0dWx1c2ps" target="_blank" rel="noopener" data-cursor="play">
+            <div class="film-card__holes film-card__holes--top" aria-hidden="true"></div>
+            <figure class="film-card__frame">
+              <img src="Images/Thumbnaills/4.webp" alt="Overcast cinematic mood edit" loading="lazy" />
+            </figure>
+            <div class="film-card__holes film-card__holes--bottom" aria-hidden="true"></div>
+            <div class="film-card__info">
+              <span class="film-card__idx mono">CUT_03</span>
+              <h3 class="film-card__title">GREY SKIES</h3>
+              <span class="film-card__cat mono">CINEMATIC / MOOD</span>
+            </div>
+          </a>
+
+          <a class="film-card" href="https://www.instagram.com/billal.edits?igsh=ZWRjeHh0dWx1c2ps" target="_blank" rel="noopener" data-cursor="play">
+            <div class="film-card__holes film-card__holes--top" aria-hidden="true"></div>
+            <figure class="film-card__frame">
+              <img src="Images/Thumbnaills/5.jpeg" alt="Shoreline — ocean cinematic edit" loading="lazy" />
+            </figure>
+            <div class="film-card__holes film-card__holes--bottom" aria-hidden="true"></div>
+            <div class="film-card__info">
+              <span class="film-card__idx mono">CUT_04</span>
+              <h3 class="film-card__title">SHORELINE</h3>
+              <span class="film-card__cat mono">TRAVEL / GRADE</span>
+            </div>
+          </a>
+
+          <a class="work__more" href="https://www.instagram.com/billal.edits?igsh=ZWRjeHh0dWx1c2ps" target="_blank" rel="noopener" data-cursor="hover">
+            <span class="work__more-big">140<span class="red">+</span></span>
+            <span class="work__more-txt mono">MORE CUTS ON INSTAGRAM ⟶</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ SC.03 — WHAT IF? THE SERIES ══════════════ -->
+    <section class="whatif" id="whatif">
+      <div class="scene-tag scene-tag--wi mono"><span class="yel">SC.03</span> — THE SERIES <span class="wi-ongoing">● ONGOING</span></div>
+
+      <div class="whatif__stage">
+
+        <!-- FRAME 0 — TITLE SEQUENCE -->
+        <div class="wi-frame wi-frame--title">
+          <p class="wi-title__kicker mono">A BILLAL.EDITS ORIGINAL</p>
+          <h2 class="wi-title__logo">WHAT&nbsp;IF<span class="wi-q">?</span></h2>
+          <p class="wi-title__sub mono">SEASON 01 · NOW STREAMING ON INSTAGRAM</p>
+        </div>
+
+        <!-- FRAMES — INTRO + EPISODES -->
+        <a class="wi-frame wi-frame--ep" data-label="S01 · THE INTRO" href="https://www.instagram.com/reel/Dai9jjNRHtm/?igsh=OG53N2IyeTYzbTFw" target="_blank" rel="noopener" data-cursor="play">
+          <img class="wi-frame__bg" src="Images/what%20if/what%20if%20into%20.jpeg" alt="" aria-hidden="true" />
+          <span class="wi-frame__poster"><img src="Images/what%20if/what%20if%20into%20.jpeg" alt="WHAT IF? series intro — meet the cast" loading="lazy" /></span>
+          <span class="wi-frame__side">
+            <span class="wi-frame__num" aria-hidden="true">00</span>
+            <span class="wi-frame__ep mono">THE INTRO — MEET THE CAST</span>
+            <span class="wi-frame__cta mono">TAP TO WATCH ON IG ⟶</span>
+          </span>
+        </a>
+
+        <a class="wi-frame wi-frame--ep" data-label="S01 · EP.01" href="https://www.instagram.com/reel/DaqAITjpYGw/?igsh=ZmM5cnR0bHo1ZDdt" target="_blank" rel="noopener" data-cursor="play">
+          <img class="wi-frame__bg" src="Images/what%20if/ep1.jpeg" alt="" aria-hidden="true" />
+          <span class="wi-frame__poster"><img src="Images/what%20if/ep1.jpeg" alt="WHAT IF? episode 1 still" loading="lazy" /></span>
+          <span class="wi-frame__side">
+            <span class="wi-frame__num" aria-hidden="true">01</span>
+            <span class="wi-frame__ep mono">EPISODE 01</span>
+            <span class="wi-frame__cta mono">TAP TO WATCH ON IG ⟶</span>
+          </span>
+        </a>
+
+        <a class="wi-frame wi-frame--ep" data-label="S01 · EP.02" href="https://www.instagram.com/reel/Dat7kzCIwca/?igsh=MW8zdzRvZWw5bGhxaA==" target="_blank" rel="noopener" data-cursor="play">
+          <img class="wi-frame__bg" src="Images/what%20if/ep2.jpeg" alt="" aria-hidden="true" />
+          <span class="wi-frame__poster"><img src="Images/what%20if/ep2.jpeg" alt="WHAT IF? episode 2 still" loading="lazy" /></span>
+          <span class="wi-frame__side">
+            <span class="wi-frame__num" aria-hidden="true">02</span>
+            <span class="wi-frame__ep mono">EPISODE 02</span>
+            <span class="wi-frame__cta mono">TAP TO WATCH ON IG ⟶</span>
+          </span>
+        </a>
+
+        <a class="wi-frame wi-frame--ep" data-label="S01 · EP.03" href="https://www.instagram.com/reel/Da8KsHlt9qF/?igsh=MTBuMnljcmd3Y3UwZA==" target="_blank" rel="noopener" data-cursor="play">
+          <img class="wi-frame__bg" src="Images/what%20if/ep3.jpeg" alt="" aria-hidden="true" />
+          <span class="wi-frame__poster"><img src="Images/what%20if/ep3.jpeg" alt="WHAT IF? episode 3 still" loading="lazy" /></span>
+          <span class="wi-frame__side">
+            <span class="wi-frame__num" aria-hidden="true">03</span>
+            <span class="wi-frame__ep mono">EPISODE 03</span>
+            <span class="wi-frame__cta mono">TAP TO WATCH ON IG ⟶</span>
+          </span>
+        </a>
+
+        <a class="wi-frame wi-frame--ep" data-label="S01 · EP.04" href="https://www.instagram.com/reel/DbKsSmqRdBE/?igsh=MWNidzFrcjJ4NW93aQ==" target="_blank" rel="noopener" data-cursor="play">
+          <img class="wi-frame__bg" src="Images/what%20if/ep4.jpeg" alt="" aria-hidden="true" />
+          <span class="wi-frame__poster"><img src="Images/what%20if/ep4.jpeg" alt="WHAT IF? episode 4 still" loading="lazy" /></span>
+          <span class="wi-frame__side">
+            <span class="wi-frame__num" aria-hidden="true">04</span>
+            <span class="wi-frame__ep mono">EPISODE 04</span>
+            <span class="wi-frame__cta mono">TAP TO WATCH ON IG ⟶</span>
+          </span>
+        </a>
+
+        <a class="wi-frame wi-frame--ep" data-label="S01 · EP.05" href="https://www.instagram.com/reel/DbUlxWpRyhD/?igsh=eGlrZ2pycTViN2lh" target="_blank" rel="noopener" data-cursor="play">
+          <img class="wi-frame__bg" src="Images/what%20if/ep5.jpeg" alt="" aria-hidden="true" />
+          <span class="wi-frame__poster"><img src="Images/what%20if/ep5.jpeg" alt="WHAT IF? episode 5 still" loading="lazy" /></span>
+          <span class="wi-frame__side">
+            <span class="wi-frame__num" aria-hidden="true">05</span>
+            <span class="wi-frame__ep mono">EPISODE 05</span>
+            <span class="wi-frame__cta mono">TAP TO WATCH ON IG ⟶</span>
+          </span>
+        </a>
+
+        <!-- END CARD — ONGOING SERIES -->
+        <div class="wi-frame wi-frame--end">
+          <h3 class="wi-end__big">TO BE<br />CONTINUED<span class="wi-blink">_</span></h3>
+          <p class="wi-end__sub mono">THE SERIES IS STILL ROLLING — NEXT EPISODE LOADING</p>
+          <a class="wi-end__cta mono" href="https://www.instagram.com/billal.edits?igsh=ZWRjeHh0dWx1c2ps" target="_blank" rel="noopener" data-cursor="hover">FOLLOW @BILLAL.EDITS FOR THE NEXT DROP ⟶</a>
+        </div>
+
+        <!-- OVERLAYS: static, letterbox bars, HUD -->
+        <div class="whatif__static" aria-hidden="true"></div>
+        <div class="whatif__bar whatif__bar--top" aria-hidden="true"></div>
+        <div class="whatif__bar whatif__bar--bottom" aria-hidden="true">
+          <div class="whatif__hud mono">
+            <span id="wiCounter">S01 · TITLES</span>
+            <span class="whatif__progress"><i id="wiProgress"></i></span>
+            <span class="whatif__hud-right">WHAT IF? · ONGOING SERIES</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════ SC.04 — THE FAMILY ══════════════ -->
+    <section class="family" id="family">
+      <div class="scene-tag mono"><span class="red">SC.04</span> — THE FAMILY</div>
+
+      <div class="family__head">
+        <h2 class="family__heading" data-reveal="lines">
+          <span class="outline">200K</span> STRONG<br />AND <span class="serif-it red">rolling</span><span class="red">.</span>
+        </h2>
+        <p class="family__sub">
+          Not followers — <strong>family</strong>. A verified page, a community of Tamil editors and dreamers growing every single day.
+        </p>
+      </div>
+
+      <div class="family__phones">
+        <div class="phone phone--left" data-speed="0.8" data-cursor="view">
+          <div class="phone__notch" aria-hidden="true"></div>
+          <img src="Images/ig%20profile%201.jpeg" alt="billal.edits Instagram profile — 200K followers, verified" loading="lazy" />
+        </div>
+        <div class="phone phone--right" data-speed="1.2" data-cursor="view">
+          <div class="phone__notch" aria-hidden="true"></div>
+          <img src="Images/ig%20profile%202.jpeg" alt="billal.edits Instagram grid of cinematic posts" loading="lazy" />
+        </div>
+        <a class="family__follow" href="https://www.instagram.com/billal.edits?igsh=ZWRjeHh0dWx1c2ps" target="_blank" rel="noopener" data-cursor="hover">
+          <span class="family__follow-inner mono">FOLLOW<br />@BILLAL<br />.EDITS ⟶</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ══════════════ SC.04 — CONTACT ══════════════ -->
+    <section class="contact" id="contact">
+      <div class="scene-tag mono"><span class="red">SC.05</span> — FINAL CUT</div>
+
+      <p class="contact__kicker mono reveal-meta">PAID EDITS · PROMOTIONS · COLLABS</p>
+      <h2 class="contact__heading manifesto-big">
+        LET'S MAKE SOMETHING THE ALGORITHM CAN'T IGNORE<span class="red">.</span>
+      </h2>
+
+      <div class="contact__ctas">
+        <a class="cta cta--primary" href="https://www.instagram.com/billal.edits?igsh=ZWRjeHh0dWx1c2ps" target="_blank" rel="noopener" data-cursor="hover">
+          <span>DM ON INSTAGRAM</span><em aria-hidden="true">⟶</em>
+        </a>
+        <a class="cta cta--ghost" href="https://yt.openinapp.co/zxlia" target="_blank" rel="noopener" data-cursor="hover">
+          <span>WATCH ON YOUTUBE</span><em aria-hidden="true">⟶</em>
+        </a>
+      </div>
+
+      <p class="physics-hint mono" id="physicsHint" aria-hidden="true">DRAG THE WRECKAGE ✦ THROW THE LETTERS</p>
+      <button class="physics-reset mono" id="physicsReset" data-cursor="hover">RESET THE MESS ↺</button>
+    </section>
+
+    <!-- ══════════════ FOOTER ══════════════ -->
+    <footer class="footer">
+      <div class="footer__word" aria-hidden="true">BILLAL</div>
+      <div class="footer__row mono">
+        <span>© 2026 BILLAL.EDITS</span>
+        <span>CUT WITH <span class="red">♥</span> IN CHENNAI</span>
+        <span>TAMIL EDITING COMMUNITY <span class="red">✦</span> FOREVER</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ══════════════ EDITOR TIMELINE SCRUBBER ══════════════ -->
+  <div class="timeline mono" id="timeline" aria-hidden="true">
+    <span class="timeline__tc" id="timecode">00:00:00:00</span>
+    <div class="timeline__track">
+      <div class="timeline__clips" aria-hidden="true">
+        <i style="--w:14%"></i><i style="--w:20%"></i><i style="--w:26%"></i><i style="--w:22%"></i><i style="--w:18%"></i>
+      </div>
+      <div class="timeline__playhead" id="playhead"></div>
+    </div>
+    <span class="timeline__tc timeline__tc--end">DIRECTOR'S CUT</span>
+  </div>
+
+  <!-- ══════════════ AI ASSISTANT — BILLAL.AI ══════════════ -->
+  <div class="chat" id="chat">
+    <button class="chat__fab" id="chatFab" data-cursor="hover" aria-expanded="false" aria-controls="chatPanel" aria-label="Open AI assistant">
+      <span class="chat__fab-dot rec-dot" aria-hidden="true"></span>
+      <span class="chat__fab-txt mono">ASK&nbsp;AI</span>
+    </button>
+
+    <section class="chat__panel" id="chatPanel" role="dialog" aria-label="Billal AI assistant" hidden>
+      <header class="chat__head">
+        <span class="rec-dot" aria-hidden="true"></span>
+        <div class="chat__head-txt">
+          <span class="chat__title mono">BILLAL<span class="red">.AI</span></span>
+          <span class="chat__status mono">DIRECTOR'S ASSISTANT — ONLINE</span>
+        </div>
+        <button class="chat__close mono" id="chatClose" data-cursor="hover" aria-label="Close chat">✕</button>
+      </header>
+
+      <div class="chat__body" id="chatBody" aria-live="polite"></div>
+
+      <div class="chat__chips" id="chatChips"></div>
+
+      <form class="chat__form" id="chatForm">
+        <input class="chat__input mono" id="chatInput" type="text" placeholder="TYPE YOUR LINE…" autocomplete="off" maxlength="220" aria-label="Message" />
+        <button class="chat__send" type="submit" data-cursor="hover" aria-label="Send message">⟶</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- GSAP + Lenis (all GSAP plugins are free) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
+  <script src="js/script.js?v=18"></script>
+</body>
+</html>
