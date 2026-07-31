@@ -620,28 +620,38 @@ ScrollTrigger.create({
     });
     Composite.add(engine.world, mc);
 
-    // touch: only hijack the gesture when a letter is actually grabbed,
-    // so normal page scrolling over the section keeps working
+    // Matter's own listeners hijack input: its touch handlers block taps
+    // and scrolling anywhere over the pile, and its wheel handlers
+    // preventDefault against Lenis. Strip them all.
     const me = mouse.element;
     me.removeEventListener("touchstart", mouse.mousedown);
     me.removeEventListener("touchmove", mouse.mousemove);
     me.removeEventListener("touchend", mouse.mouseup);
-    let touchDrag = false;
-    me.addEventListener("touchstart", (e) => {
-      mouse.mousedown(e);
-      const hit = Query.point(letters.map((L) => L.body), mouse.position);
-      touchDrag = hit.length > 0;
-      if (touchDrag) e.preventDefault();
-    }, { passive: false });
-    me.addEventListener("touchmove", (e) => {
-      if (!touchDrag) return;
-      e.preventDefault();
-      mouse.mousemove(e);
-    }, { passive: false });
-    me.addEventListener("touchend", (e) => {
-      touchDrag = false;
-      mouse.mouseup(e);
-    });
+    me.removeEventListener("mousewheel", mouse.mousewheel);
+    me.removeEventListener("DOMMouseScroll", mouse.mousewheel);
+
+    // fine pointers only: re-add touch with a grab guard (touchscreen
+    // laptops). On phones the letters aren't draggable — a fallen pile
+    // covers the reset button and the exits, so a tap or scroll there
+    // must always stay native.
+    if (!window.matchMedia("(pointer: coarse)").matches) {
+      let touchDrag = false;
+      me.addEventListener("touchstart", (e) => {
+        mouse.mousedown(e);
+        const hit = Query.point(letters.map((L) => L.body), mouse.position);
+        touchDrag = hit.length > 0;
+        if (touchDrag) e.preventDefault();
+      }, { passive: false });
+      me.addEventListener("touchmove", (e) => {
+        if (!touchDrag) return;
+        e.preventDefault();
+        mouse.mousemove(e);
+      }, { passive: false });
+      me.addEventListener("touchend", (e) => {
+        touchDrag = false;
+        mouse.mouseup(e);
+      });
+    }
 
     // the cut: release in a fast cascade with a small pop of momentum
     letters.forEach((L, i) => {

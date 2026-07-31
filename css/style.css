@@ -536,6 +536,10 @@ html[data-theme="light"] .phone { box-shadow: 0 30px 60px rgba(17, 16, 19, 0.25)
   visibility: hidden;
   transform: translateY(8px);
 }
+/* phones can't drag the letters (native scroll wins) — drop the hint */
+@media (pointer: coarse) {
+  .physics-hint { display: none; }
+}
 .physics-reset {
   position: relative;
   z-index: 5;
